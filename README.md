@@ -1,6 +1,8 @@
-# Openwhisk RSS Package
+# Openwhisk RSS Package MacOS X 
 
-This package allows users to subscribe to RSS/ATOM feeds and receive events when a new feed item is available. It creates one event/activation per feed item that meets the criteria. Below is the hierarchy of the RSS Package.
+This package is modified NOT the original. This package is intended for MacOS X. 
+
+The package allows users to subscribe to RSS/ATOM feeds and receive events when a new feed item is available. It creates one event/activation per feed item that meets the criteria. Below is the hierarchy of the RSS Package.
 
 ```
 openwhisk-package-rss/
@@ -43,6 +45,15 @@ openwhisk-package-rss/
 | filter | *string* | no |  Comma separted list of keywords to filter on| - | - | "Washington D.C.,capital" |
 
 Note: If the filter parameter enables logic that only searches for matches in the feed items' titles and descriptions. If 60% or more of the keywords are found in the RSS feed item, an event will be fired for the feed item. For example, given that filter "Washington D.C.,capital,politics", an event will be fired only if 2 of the 3 keywords are present in the feed item.
+
+## Command for MacOS X
+
+If your MacOS X CLI downloaded to `/Users/abhishekghosh/Desktop/wsk`, then run `/Users/abhishekghosh/Desktop/wsk` as command from iTerm2 instead of `wsk`. In other words, read `wsk` henceafter as `/path/to/download/on/osx/wsk`. Example, running :
+
+    /Users/abhishekghosh/Desktop/wsk property get
+
+will give the credentials. 
+    
 
 ## RSS Package Installation
 
